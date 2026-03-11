@@ -11,7 +11,7 @@ Based on AWS best practices (SAA-C03), these labs cover:
 * **RDS Provisioning:** Launching managed relational databases (PostgreSQL).
 * **High Availability:** Implementing Multi-AZ deployments for failover.
 * **Read Scalability:** (Upcoming) Offloading read traffic with Read Replicas.
-* **Security & Encryption:** (Upcoming) Securing data at rest with SSE-KMS.
+* **Security & Encryption:** Securing data at rest with SSE-KMS and IAM Database Auth.
 * **Disaster Recovery:** Managing snapshots and automated backups.
 
 ## ⚙️ Prerequisites
@@ -41,3 +41,4 @@ Based on AWS best practices (SAA-C03), these labs cover:
 1. [Lab 1: Networking Foundation & Base RDS Deployment](./labs/lab1-rds-networking-foundation/README.md)
 2. [Lab 2: High Availability (Multi-AZ Conversion)](./labs/lab2-rds-high-availability/README.md)
 3. [Lab 3: Backup & Retention Policies](./labs/lab3-rds-backup-retention/README.md)
+4. [Lab 4: Advanced Security (Encryption & IAM Auth)](./labs/lab4-rds-security-encryption/README.md)
