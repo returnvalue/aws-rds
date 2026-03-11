@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  SubnetIds: {Type: 'List<AWS::EC2::Subnet::Id>'}
+  DBInstanceId: {Type: String}
+Resources:
+  DBCredsSecret:
+    Type: 'AWS::SecretsManager::Secret'
+    Properties: {Name: RDSProxyCredentials}
+  ProxyRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement: [{Effect: Allow, Principal: {Service: rds.amazonaws.com}, Action: sts:AssumeRole}]
+  DBProxy:
+    Type: 'AWS::RDS::DBProxy'
+    Properties:
+      DBProxyName: lambda-db-proxy
+      EngineFamily: POSTGRESQL
+      RoleArn: !GetAtt ProxyRole.Arn
+      VpcSubnetIds: !Ref SubnetIds
+      Auth: [{AuthScheme: SECRETS, SecretArn: !Ref DBCredsSecret, IAMAuth: DISABLED}]
+  DBProxyTargetGroup:
+    Type: 'AWS::RDS::DBProxyTargetGroup'
+    Properties:
+      DBProxyName: !Ref DBProxy
+      TargetGroupName: default
+      DBInstanceIdentifiers: [!Ref DBInstanceId]

@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  PrimaryDB:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBInstanceIdentifier: primary-db
+      BackupRetentionPeriod: 35
+      PreferredBackupWindow: "02:00-03:00"

@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  RDSKmsKey:
+    Type: 'AWS::KMS::Key'
+    Properties: {Description: RDS Encryption Key, KeyPolicy: {Version: '2012-10-17', Statement: [{Effect: Allow, Principal: {AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'}, Action: 'kms:*', Resource: '*'}]}}
+  SecurePrimaryDB:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBInstanceIdentifier: secure-primary-db
+      AllocatedStorage: '20'
+      Engine: postgres
+      DBInstanceClass: db.t3.micro
+      MasterUsername: dbadmin
+      MasterUserPassword: supersecret123
+      StorageEncrypted: true
+      KmsKeyId: !Ref RDSKmsKey
+      EnableIAMDatabaseAuthentication: true
