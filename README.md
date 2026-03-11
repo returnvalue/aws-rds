@@ -11,6 +11,7 @@ Based on AWS best practices (SAA-C03), these labs cover:
 * **RDS Provisioning:** Launching managed relational databases (PostgreSQL).
 * **High Availability:** Implementing Multi-AZ deployments for failover.
 * **Serverless Databases:** Deploying Amazon Aurora Serverless for unpredictable workloads.
+* **Connection Pooling:** Implementing RDS Proxy for serverless scalability and resiliency.
 * **Security & Encryption:** Securing data at rest with SSE-KMS and IAM Database Auth.
 * **Disaster Recovery:** Managing snapshots and automated backups.
 
@@ -43,3 +44,4 @@ Based on AWS best practices (SAA-C03), these labs cover:
 3. [Lab 3: Backup & Retention Policies](./labs/lab3-rds-backup-retention/README.md)
 4. [Lab 4: Advanced Security (Encryption & IAM Auth)](./labs/lab4-rds-security-encryption/README.md)
 5. [Lab 5: Serverless Workloads (Aurora Serverless)](./labs/lab5-rds-aurora-serverless/README.md)
+6. [Lab 6: Serverless Connection Pooling (RDS Proxy)](./labs/lab6-rds-proxy/README.md)
