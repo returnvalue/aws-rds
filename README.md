@@ -9,7 +9,7 @@ This repository contains hands-on labs demonstrating core Amazon RDS concepts, f
 Based on AWS best practices (SAA-C03), these labs cover:
 * **Networking Foundation:** Designing DB Subnet Groups for multi-AZ reliability.
 * **RDS Provisioning:** Launching managed relational databases (PostgreSQL).
-* **High Availability:** (Upcoming) Implementing Multi-AZ deployments for failover.
+* **High Availability:** Implementing Multi-AZ deployments for failover.
 * **Read Scalability:** (Upcoming) Offloading read traffic with Read Replicas.
 * **Security & Encryption:** (Upcoming) Securing data at rest with SSE-KMS.
 * **Disaster Recovery:** (Upcoming) Managing snapshots and automated backups.
@@ -39,3 +39,4 @@ Based on AWS best practices (SAA-C03), these labs cover:
 
 ## 📚 Labs Index
 1. [Lab 1: Networking Foundation & Base RDS Deployment](./labs/lab1-rds-networking-foundation/README.md)
+2. [Lab 2: High Availability (Multi-AZ Conversion)](./labs/lab2-rds-high-availability/README.md)
