@@ -1,7 +1,6 @@
 # Lab 4: Advanced Security (Encryption & IAM Auth)
 
 **Goal:** Provision a completely new database that is encrypted at rest using a Customer Managed KMS Key from day one, and enable IAM Database Authentication so we can eventually phase out static passwords.
-
 ```bash
 # 1. Create a KMS Key for the database encryption
 KMS_KEY=$(awslocal kms create-key --description "RDS Encryption Key" --query 'KeyMetadata.KeyId' --output text)

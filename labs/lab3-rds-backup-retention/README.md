@@ -1,7 +1,6 @@
 # Lab 3: Backup & Retention Policies
 
 **Goal:** Meet strict compliance requirements by extending the automated backup retention period to the maximum allowable limit (35 days) and defining a specific maintenance window to prevent performance degradation during peak business hours.
-
 ```bash
 # Modify the primary database to enforce maximum automated backup retention
 awslocal rds modify-db-instance \

@@ -1,7 +1,6 @@
 # Lab 1: Networking Foundation & Base RDS Deployment
 
 **Goal:** RDS requires a DB Subnet Group spanning at least two Availability Zones. We will create the underlying VPC, the Subnet Group, and deploy our primary unencrypted PostgreSQL database.
-
 ```bash
 # 1. Create a VPC and two Subnets in different AZs
 VPC_ID=$(awslocal ec2 create-vpc --cidr-block 10.0.0.0/16 --query 'Vpc.VpcId' --output text)

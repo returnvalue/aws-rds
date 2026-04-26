@@ -1,7 +1,6 @@
 # Lab 2: High Availability (Multi-AZ Conversion)
 
 **Goal:** Our database is currently in a single AZ. To prepare for production, modify the instance to enable Multi-AZ deployment for synchronous standby replication and automatic failover.
-
 ```bash
 # Modify the instance to Multi-AZ
 awslocal rds modify-db-instance \

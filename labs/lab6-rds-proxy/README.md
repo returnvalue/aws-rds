@@ -1,7 +1,6 @@
 # Lab 6: Serverless Connection Pooling (RDS Proxy)
 
 **Goal:** Prevent thousands of concurrent Lambda invocations from exhausting the database connections by placing an RDS Proxy between the application and the database.
-
 ```bash
 # 1. Store the DB credentials securely in AWS Secrets Manager
 SECRET_ARN=$(awslocal secretsmanager create-secret \

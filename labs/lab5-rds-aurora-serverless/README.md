@@ -1,7 +1,6 @@
 # Lab 5: Serverless Workloads (Aurora Serverless)
 
 **Goal:** Deploy a database for an application with highly unpredictable traffic spikes. Aurora Serverless automatically scales compute capacity (ACUs) up and down based on demand.
-
 ```bash
 # Create an Aurora Serverless v2 PostgreSQL cluster
 awslocal rds create-db-cluster \
